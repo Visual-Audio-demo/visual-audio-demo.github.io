@@ -25,7 +25,7 @@
   <body>
     <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
       <div class="text-center">
-        <h3>Video-Guided Universal Audio Generation with Mixture-Of-Expert Transformer at Scale </h3>
+        <h3>Video-Guided Audio Generation and Adaptation with Mixture of Experts at Scale </h3>
 
             <p class="mt-3">
       <a href="Paper_Appendix.pdf" class="btn btn-outline-primary btn-lg fw-bold" target="_blank">
@@ -52,7 +52,7 @@
       </div>
       <p>
         <b>Abstract.</b>  
-        We propose a model with mixture of experts to scale video-to-audio generation. To tackle the challenges of modeling long audio signals, we propose flow-matching transformers to approximate the velocity vector field, which obtain data samples in the probability flow ordinary differential equation (ODE). To scale in terms of model capability, we stack mixture-of-experts (MoE) with both frequency-MoE and time-MoE layers, respectively for sounding semantics in specific audio frequency regions or denoising timesteps. Together with the power of contrastive video-audio pretraining (CVAP) and high-fidelity semantic compression, we achieve a deep level of video understanding with synchronized and high-fidelity generation. It even generalizes well to open-domain data (e.g., dancing video, or music video), or in multiple user-defined visual-guided audio generation tasks (e.g., continuation and interpolation), which empowers humans to create rich and diverse audio content with personalized transfer and fine-grained control.
+        Video-guided audio generation aims to add synchronized and realistic audio effects to videos and films, significantly benefiting video generative AI and video post-production. However, achieving high-fidelity generation remains challenging due to the complexity of modeling long audio sequences and learning audio-visual correspondence, both semantically and temporally. In this work, we propose VisualAudio, a scalable transformer with mixture-of-experts (MOE) for video-guided audio generation and adaptation. We approximate the velocity vector field with a flow-matching objective and generate sample by solving the probability flow ordinary differential equation (ODE). To guarantee video-audio alignment and synchronization, we scale VisualAudio with time and frequency MOE layers specializing across noise levels and frequency bands, along with a cross-attention architecture that effectively injects visual conditions. To enable adaptation to unseen scenarios, we introduce parameter-efficient module with lora and bias/norm tuning requiring minimal computational overhead. Experimental results demonstrate that VisualAudio achieves state-of-the-art performance in zero-shot video-to-audio generation. Furthermore, efficient adaptation with only 5\% learnable parameters enables generalization to new data (e.g., dancing/music videos) or user-defined tasks (e.g., video-guided audio transfer and interpolation), empowering users to create rich and visual-aligned audio content.         
       </p>
     </div>
 
